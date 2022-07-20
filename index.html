@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>chat app</title>
+
+    
+
+
+
+
+
+    <style>
+        .container {
+
+            /* height: 500px; */
+            /* width: 500px; */
+            /* border: 2px solid black; */
+            display: block;
+            margin: auto;
+            margin-top: 70px;
+        }
+        
+        #send-container {
+            background: rgb(78, 165, 212);
+            padding: 0.25rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            height: 3rem;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+        }
+        
+        #input {
+            border: none;
+            padding: 0 1rem;
+            flex-grow: 1;
+            border-radius: 3rem;
+            margin: 0.25rem;
+        }
+        
+        #input:focus {
+            outline: none;
+        }
+        
+        #form>button {
+            background: rgb(28, 194, 58);
+            border: none;
+            padding: 0 1rem;
+            margin: 0.25rem;
+            border-radius: 30px;
+            outline: none;
+            color: #fff;
+        }
+        #form>button:hover{
+            background: rgb(212, 102, 66);
+            cursor: pointer;
+            
+        
+        }
+        
+        
+        #messages {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #messages>li {
+            padding: 0.5rem 1rem;
+        }
+        
+        #messages>li:nth-child(odd) {
+            background: #efefef;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+
+
+
+
+        <ul id="messages"></ul>
+
+
+    </div>
+    <form action="" id="send-container">
+
+        <input type="text" id="input" autocomplete="on" placeholder="Type your massage here">
+        <button id="button">send</button>
+    </form>
+    
+</body>
+
+
+<script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.5.0/socket.io.js"></script>
+<script sync src="/script.js"></script>
+
+
+</html>
